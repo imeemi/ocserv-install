@@ -26,7 +26,7 @@ cd ${basepath}
 
 function ConfigEnvironmentVariable {
     #ocserv版本
-    ocserv_version=0.10.4
+    ocserv_version=0.10.9
     version=${1-${ocserv_version}}
     libtasn1_version=4.5
     #变量设置
@@ -144,7 +144,7 @@ function CompileOcserv {
 	wget ftp://ftp.gnutls.org/gcrypt/gnutls/v3.2/gnutls-3.2.15.tar.xz
 	tar xvf gnutls-3.2.15.tar.xz
 	cd gnutls-3.2.15
-	export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig:$PKG_CONFIG_PATH
+	export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig
 	./configure && make && make install
 	cd ..
 	#编译安装libnl
